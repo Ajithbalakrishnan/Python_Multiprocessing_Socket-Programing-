@@ -122,9 +122,8 @@ class Newapp(FloatLayout):
     def __init__(self, **kwargs):
         super(Newapp, self).__init__(**kwargs)
         Clock.schedule_once(self.start_time_updates)
-     #   self.start_video_updates()
+        self.start_video_updates()
         Clock.schedule_interval(self.update_img,.5)
-    #    Clock.schedule_interval(self.ids.imgWall.source)
     
     def start_time_updates(self, dt):
         t = self.ids.time
@@ -151,32 +150,7 @@ class Newapp(FloatLayout):
             time.sleep = 1
             os.remove("/home/pi/ajith_rpi/final_UI_V1/img/1.jpg")
         
-#        self.imgWall.texture =  im.texture
-        
-#        self.imgWall.source = self.img_update
-# '/home/pi/ajith_rpi/kivy_UI/edited_background_2.png'        
-#         while True:
-#             if img_queue.qsize() > 0 :
-#                 print("q size is grater than one")
-#                 data = img_queue.get()
-#                 frame=pickle.loads(data, fix_imports=True, encoding="bytes")
-#                 frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
-#                 cv2.imwrite("/home/pi/ajith_rpi/final_UI_V1/img/1.jpg", frame)
-#                 self.imgWall.source = "/home/pi/ajith_rpi/final_UI_V1/img/1.jpg"
-#                 time.sleep(1)
-#             else :
-#                self.imgWall.source = '/home/pi/ajith_rpi/kivy_UI/edited_background_2.png'
-# 
-    
-        
-#     print("update_img_queue size : ", img_queue.qsize())
-#     while True:
-#         if img_queue.qsize() > 0 :
-#             print("q size is grater than one")
-#             data = img_queue.get()
-#             frame=pickle.loads(data, fix_imports=True, encoding="bytes")
-#             frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
-#             Newapp.display_img(frame)
+
             
 class ButtonsApp(App):
      
